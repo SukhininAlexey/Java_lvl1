@@ -87,7 +87,7 @@ public class TicTacToe {
 
                 if(field[i][j] == c){
                     horQtty++;
-                    if(vertQtty >= WIN_QTTY) return true;
+                    if(horQtty >= WIN_QTTY) return true;
                 }else{
                     horQtty = 0;
                 }
@@ -97,9 +97,9 @@ public class TicTacToe {
                 // Но вот итераций меньше = оптимальнее.
                 if(field[j][i] == c){
                     vertQtty++;
-                    if(horQtty >= WIN_QTTY) return true;
+                    if(vertQtty >= WIN_QTTY) return true;
                 }else{
-                    horQtty = 0;
+                    vertQtty = 0;
                 }
             }
         }
